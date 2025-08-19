@@ -11,29 +11,30 @@ jobs:
 
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
-      - name: Setup Node.js
-        uses: actions/setup-node@v3
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
         with:
           node-version: 18
 
       - name: Install Marp CLI
         run: npm install -g @marp-team/marp-cli
 
-      - name: Build slides
-        run: |
-          marp slides.md -o index.html --allow-local-files
-          marp slides.md -o slides.pdf --pdf --allow-local-files
+      - name: Build HTML slides
+        run: marp slides.md -o index.html
 
-      - name: Upload artifact (PDF)
-        uses: actions/upload-artifact@v3
+      - name: Build PDF slides
+        run: marp slides.md -o slides.pdf
+
+      - name: Upload PDF artifact
+        uses: actions/upload-artifact@v4   # ✅ updated to v4
         with:
           name: slides-pdf
           path: slides.pdf
 
       - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v3
+        uses: peaceiris/actions-gh-pages@v4   # ✅ also update to v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./
