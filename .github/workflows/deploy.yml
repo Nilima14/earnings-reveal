@@ -28,13 +28,14 @@ jobs:
         run: marp slides.md -o slides.pdf
 
       - name: Upload PDF artifact
-        uses: actions/upload-artifact@v4   # ✅ updated to v4
+        uses: actions/upload-artifact@v4
         with:
           name: slides-pdf
           path: slides.pdf
 
       - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v4   # ✅ also update to v4
+        uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./
+          publish_branch: gh-pages
+          publish_dir: .
