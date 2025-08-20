@@ -1,8 +1,8 @@
 ---
-marp: true
-theme: default
-title: Product Documentation Presentation
-author: Nilima Motghare
+marp:true
+theme:default
+title:Product Documentation Presentation
+author:Nilima Motghare
 paginate: true
 ---
 
