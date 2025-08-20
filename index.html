@@ -5,6 +5,8 @@
     <title>Earnings Report Presentation</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/dist/reveal.css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/dist/theme/white.css" />
+    <!-- Highlight.js theme -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/plugin/highlight/monokai.css" />
     <script src="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/dist/reveal.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/plugin/markdown/markdown.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/plugin/highlight/highlight.js"></script>
@@ -50,10 +52,10 @@
           <aside class="notes">Explain quarterly highlights step by step.</aside>
         </section>
 
-        <!-- Code Example -->
+        <!-- Code Example with Syntax Highlighting -->
         <section>
           <h2>Data Analysis Code</h2>
-          <pre><code class="python" data-line-numbers>
+          <pre><code class="language-python" data-trim data-line-numbers>
 import pandas as pd
 
 # Load financial data
