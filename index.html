@@ -1,23 +1,23 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
-    <meta charset="utf-8" />
-    <title>Earnings Report Presentation</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/dist/reveal.css" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/dist/theme/white.css" />
+    <meta charset="utf-8">
+    <title>Earnings Report</title>
+
+    <!-- RevealJS core -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js/dist/reveal.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js/dist/theme/white.css">
+
     <!-- Highlight.js theme -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/plugin/highlight/monokai.css" />
-    <script src="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/dist/reveal.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/plugin/markdown/markdown.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/plugin/highlight/highlight.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/plugin/math/math.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js/plugin/highlight/monokai.css">
+    
     <style>
       footer {
         position: absolute;
-        bottom: 10px;
-        left: 20px;
+        bottom: 8px;
+        left: 16px;
         font-size: 14px;
-        color: #555;
+        color: #444;
       }
     </style>
   </head>
@@ -25,37 +25,17 @@
     <div class="reveal">
       <div class="slides">
 
-        <!-- Markdown Slide -->
-        <section data-markdown>
-          <textarea data-template>
-            ## Quarterly Earnings Report
-            **By Nilima14**
-            
-            - Revenue increased by 15%
-            - Net profit margin improved
-            - Industry benchmark exceeded
-
-            ---
-            ## Contact
-            📧 23f1000504@ds.study.iitm.ac.in
-          </textarea>
+        <!-- Title Slide -->
+        <section>
+          <h2>Quarterly Earnings Report</h2>
+          <p>By Nilima14</p>
+          <p>📧 23f1000504@ds.study.iitm.ac.in</p>
         </section>
 
-        <!-- Fragment Example -->
+        <!-- Code Block with Syntax Highlighting -->
         <section>
-          <h2>Highlights</h2>
-          <ul>
-            <li class="fragment">Q1 Profit Growth</li>
-            <li class="fragment">Q2 Revenue Surge</li>
-            <li class="fragment">Q3 Expansion Plans</li>
-          </ul>
-          <aside class="notes">Explain quarterly highlights step by step.</aside>
-        </section>
-
-        <!-- Code Example with Syntax Highlighting -->
-        <section>
-          <h2>Data Analysis Code</h2>
-          <pre><code class="language-python" data-trim data-line-numbers>
+          <h3>Data Analysis Code</h3>
+          <pre><code class="language-python">
 import pandas as pd
 
 # Load financial data
@@ -64,25 +44,19 @@ print(df.head())
           </code></pre>
         </section>
 
-        <!-- Math Formula -->
-        <section>
-          <h2>Financial Formula</h2>
-          \[
-            ROI = \frac{Net\ Profit}{Investment} \times 100
-          \]
-          <aside class="notes">Explain ROI to stakeholders.</aside>
-        </section>
-
       </div>
     </div>
 
-    <!-- Footer with Email on Every Page -->
     <footer>📧 23f1000504@ds.study.iitm.ac.in</footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/reveal.js/dist/reveal.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/reveal.js/plugin/highlight/highlight.js"></script>
 
     <script>
       Reveal.initialize({
         hash: true,
-        plugins: [ RevealMarkdown, RevealHighlight, RevealMath ]
+        plugins: [ RevealHighlight ]
       });
     </script>
   </body>
