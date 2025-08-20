@@ -2,100 +2,85 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <title>Quarterly Earnings Report</title>
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/dist/reveal.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/dist/theme/white.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/plugin/highlight/monokai.css"
-    />
-  </head>
-  <body>
-    <div class="reveal">
-      <div class="slides">
-        <!-- Title Slide -->
-        <section>
-          <h1>Quarterly Earnings Report</h1>
-          <p><strong>Email:</strong> 23f1000504@ds.study.iitm.ac.in</p>
-        </section>
-
-        <!-- Markdown Slide -->
-        <section data-markdown>
-          <textarea data-template>
-            ## Highlights
-
-            - Revenue grew by **12% QoQ**
-            - Net profit margin improved
-            - Expenses decreased by **5%**
-
-            ---
-            
-            ## Contact  
-            Email: 23f1000504@ds.study.iitm.ac.in
-          </textarea>
-        </section>
-
-        <!-- Animated Fragments -->
-        <section>
-          <h2>Key Growth Drivers</h2>
-          <ul>
-            <li class="fragment">Increased digital adoption</li>
-            <li class="fragment">Cost optimization initiatives</li>
-            <li class="fragment fade-up">New product launches</li>
-          </ul>
-        </section>
-
-        <!-- Code Sample -->
-        <section>
-          <h2>Data Analysis Example</h2>
-          <pre><code class="python" data-line-numbers="1-2|4-6">
-import pandas as pd
-import matplotlib.pyplot as plt
-
-data = pd.read_csv("earnings.csv")
-plt.plot(data["Quarter"], data["Revenue"])
-plt.show()
-          </code></pre>
-        </section>
-
-        <!-- Math Equation -->
-        <section>
-          <h2>Financial Formula</h2>
-          <p>
-            Net Present Value:
-            \[
-              NPV = \sum_{t=1}^{n} \frac{R_t}{(1 + i)^t}
-            \]
-          </p>
-        </section>
-
-        <!-- Speaker Notes -->
-        <section>
-          <h2>Closing Remarks</h2>
-          <p>Q4 outlook remains strong with continued digital momentum.</p>
-          <aside class="notes">
-            Emphasize that digital adoption and cost efficiency will continue
-            driving performance next quarter.
-          </aside>
-        </section>
-      </div>
-    </div>
-
+    <title>Earnings Report Presentation</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/dist/reveal.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/dist/theme/white.css" />
     <script src="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/dist/reveal.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/plugin/markdown/markdown.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/plugin/highlight/highlight.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/plugin/math/math.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/plugin/notes/notes.js"></script>
+    <style>
+      footer {
+        position: absolute;
+        bottom: 10px;
+        left: 20px;
+        font-size: 14px;
+        color: #555;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+
+        <!-- Markdown Slide -->
+        <section data-markdown>
+          <textarea data-template>
+            ## Quarterly Earnings Report
+            **By Nilima14**
+            
+            - Revenue increased by 15%
+            - Net profit margin improved
+            - Industry benchmark exceeded
+
+            ---
+            ## Contact
+            📧 23f1000504@ds.study.iitm.ac.in
+          </textarea>
+        </section>
+
+        <!-- Fragment Example -->
+        <section>
+          <h2>Highlights</h2>
+          <ul>
+            <li class="fragment">Q1 Profit Growth</li>
+            <li class="fragment">Q2 Revenue Surge</li>
+            <li class="fragment">Q3 Expansion Plans</li>
+          </ul>
+          <aside class="notes">Explain quarterly highlights step by step.</aside>
+        </section>
+
+        <!-- Code Example -->
+        <section>
+          <h2>Data Analysis Code</h2>
+          <pre><code class="python" data-line-numbers>
+import pandas as pd
+
+# Load financial data
+df = pd.read_csv("earnings.csv")
+print(df.head())
+          </code></pre>
+        </section>
+
+        <!-- Math Formula -->
+        <section>
+          <h2>Financial Formula</h2>
+          \[
+            ROI = \frac{Net\ Profit}{Investment} \times 100
+          \]
+          <aside class="notes">Explain ROI to stakeholders.</aside>
+        </section>
+
+      </div>
+    </div>
+
+    <!-- Footer with Email on Every Page -->
+    <footer>📧 23f1000504@ds.study.iitm.ac.in</footer>
+
     <script>
       Reveal.initialize({
-        plugins: [RevealMarkdown, RevealHighlight, RevealMath, RevealNotes],
         hash: true,
+        plugins: [ RevealMarkdown, RevealHighlight, RevealMath ]
       });
     </script>
   </body>
