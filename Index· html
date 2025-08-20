@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Quarterly Earnings — Interactive RevealJS Deck</title>
+
+  <!-- RevealJS core & theme (CDN) -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/dist/reveal.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/dist/theme/white.css" id="theme">
+
+  <!-- Code highlight styles -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/plugin/highlight/monokai.css">
+
+  <style>
+    /* Custom tweaks */
+    .reveal h1, .reveal h2, .reveal h3 { letter-spacing: 0.3px; }
+    .r-fit-text { font-size: calc(2.3vw + 2.3vh + 1.2vmin); }
+    .muted { opacity: .8; font-size: .8em; }
+    .kpi { display:grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-top: 16px; }
+    .kpi .card { padding: 18px; border-radius: 16px; box-shadow: 0 6px 20px rgba(0,0,0,.08); }
+    .kpi .card h3 { margin: 0 0 6px; }
+  </style>
+</head>
+<body>
+  <div class="reveal">
+    <div class="slides">
+
+      <!-- Title Slide -->
+      <section>
+        <h1 class="r-fit-text">Quarterly Earnings Report</h1>
+        <p>Interactive presentation powered by RevealJS</p>
+        <p class="muted">Prepared by: 23f1000504@ds.study.iitm.ac.in</p>
+        <aside class="notes">
+          Welcome the audience. Mention that this deck supports live demos, code, and math. Keep an eye on time.
+        </aside>
+      </section>
+
+      <!-- Markdown Slide (required) -->
+      <section data-markdown>
+        <textarea data-template>
+## Agenda (Markdown)
+
+- Highlights
+- Financials
+- Guidance
+- Risks & Mitigations
+- Q&A
+
+> This slide is authored in **Markdown** and rendered by RevealJS.
+        </textarea>
+        <aside class="notes">Call out that this slide proves Markdown support.</aside>
+      </section>
+
+      <!-- KPI Slide with fragments (animated reveal) -->
+      <section>
+        <h2>Highlights</h2>
+        <div class="kpi">
+          <div class="card fragment">
+            <h3>Revenue</h3>
+            <p><strong>$4.2B</strong> (+12% YoY)</p>
+          </div>
+          <div class="card fragment fade-up">
+            <h3>EPS (Adj.)</h3>
+            <p><strong>$1.34</strong> (+9% YoY)</p>
+          </div>
+          <div class="card fragment fade-in-then-semi-out">
+            <h3>Free Cash Flow</h3>
+            <p><strong>$680M</strong> (+18% YoY)</p>
+          </div>
+        </div>
+        <aside class="notes">Use fragments to pace the narrative. Pause between each KPI.</aside>
+      </section>
+
+      <!-- Code sample with syntax highlighting & animated line focus -->
+      <section>
+        <h2>Reproducible Analysis (Python)</h2>
+        <pre><code class="language-python" data-line-numbers="1-2|4-7|9-14">
+import pandas as pd
+import numpy as np
+
+# Load anonymized earnings data
+sales = pd.read_csv('data/quarterly_sales.csv')
+ops   = pd.read_csv('data/operating_costs.csv')
+
+# Simple margin calculation
+rev = sales['revenue'].sum()
+cost = ops['opex'].sum()
+margin = (rev - cost) / rev
+print(f"Operating Margin: {margin:.2%}")
+        </code></pre>
+        <aside class="notes">Point out syntax highlighting and step-wise focus using data-line-numbers.</aside>
+      </section>
+
+      <!-- Financial math (MathJax) -->
+      <section>
+        <h2>Financial Formula</h2>
+        <p>Discounted Cash Flow (DCF) for a single period:</p>
+        <p>\[ PV = \frac{CF_1}{(1 + r)^1} + \frac{CF_2}{(1 + r)^2} + \cdots + \frac{CF_n}{(1 + r)^n} \]</p>
+        <p>Weighted Average Cost of Capital (WACC):</p>
+        <p>\[ \text{WACC} = \frac{E}{V} r_e + \frac{D}{V} r_d (1 - T) \]</p>
+        <aside class="notes">Briefly relate WACC inputs to current market conditions.</aside>
+      </section>
+
+      <!-- Speaker notes demo -->
+      <section>
+        <h2>Guidance</h2>
+        <ul>
+          <li class="fragment">FY revenue growth: 10%–12%</li>
+          <li class="fragment">Operating margin: 21%–22%</li>
+          <li class="fragment">CapEx: $1.1B–$1.2B</li>
+        </ul>
+        <aside class="notes">
+          Emphasize conservative outlook due to macro headwinds. Note FX sensitivity.
+        </aside>
+      </section>
+
+      <!-- Closing -->
+      <section>
+        <h2>Thank You</h2>
+        <p>Contact: <strong>23f1000504@ds.study.iitm.ac.in</strong></p>
+        <p class="muted">Press <kbd>S</kbd> to open speaker notes, <kbd>?</kbd> for help.</p>
+      </section>
+
+    </div>
+  </div>
+
+  <!-- RevealJS core -->
+  <script src="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/dist/reveal.js"></script>
+  <!-- Plugins: Markdown, Highlight, Math, Notes -->
+  <script src="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/plugin/markdown/markdown.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/plugin/highlight/highlight.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/plugin/math/math.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/plugin/notes/notes.js"></script>
+
+  <script>
+    Reveal.initialize({
+      width: 1280,
+      height: 720,
+      margin: 0.05,
+      controls: true,
+      progress: true,
+      hash: true,
+      transition: 'slide',
+      plugins: [ RevealMarkdown, RevealHighlight, RevealMath, RevealNotes ],
+      math: {
+        mathjax: 'https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js',
+        config: 'TeX-AMS_HTML'
+      }
+    });
+  </script>
+</body>
+</html>
