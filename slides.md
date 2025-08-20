@@ -11,4 +11,4 @@ paginate: true
 # Product Documentation  
 ### Using Marp in GitHub Pages  
 
-**Email:** 23f1000504@ds.study.iitm.ac.in  
+Email: 23f1000504@ds.study.iitm.ac.in
