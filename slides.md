@@ -1,8 +1,6 @@
 ---
-marp:true
-theme:default
-title:Product Documentation Presentation
-author:Nilima Motghare
+marp: true
+theme: default
 paginate: true
 ---
 
@@ -10,4 +8,4 @@ paginate: true
 
 Nilima Motghare  
 
-**Email:** 23f1000504@ds.study.iitm.ac.in  
+**Email:** 23f1000504@ds.study.iitm.ac.in
